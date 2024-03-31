@@ -130,7 +130,7 @@ export async function Footer() {
               <React.Suspense>
                 <LastVisitorInfo />
               </React.Suspense>
-              <p className='mt-2 text-sm text-zinc-500/80 dark:text-zinc-400/80'>
+              <p className='mt-2 sm:mt-0 text-sm text-zinc-500/80 dark:text-zinc-400/80'>
                 Forked from {' '}
                 <a className='underline' href="https://github.com/CaliCastle/cali.so">
                   CaliCastle
