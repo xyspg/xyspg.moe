@@ -3,7 +3,6 @@
 import {motion} from 'framer-motion'
 import Balancer from 'react-wrap-balancer'
 
-import {SparkleIcon} from '~/assets'
 import {SocialLink} from '~/components/links/SocialLink'
 
 function Developer() {
@@ -40,7 +39,7 @@ function OCD() {
   return (
     <span className="group">
       {/*<SparkleIcon className="mr-1 inline-flex transform-gpu transition-transform duration-500 group-hover:rotate-180" />*/}
-      <span>Hi, I'm xyspg 👋</span>
+      <span>Hi, I&#39;m xyspg 👋</span>
     </span>
   )
 }
