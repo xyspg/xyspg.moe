@@ -5,8 +5,8 @@ import { Container } from '~/components/ui/Container'
 
 import { BlogPosts } from './BlogPosts'
 
-const description =
-  '我可能会偶尔写一些博客文章，记录生活或是钻研技术。'
+const description = ''
+  // '我可能会偶尔写一些博客文章，记录生活或是钻研技术。'
 export const metadata = {
   title: '我的博客',
   description,

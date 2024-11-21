@@ -3,7 +3,7 @@ import { clsxm } from '@zolplay/utils'
 import Image from 'next/image'
 import Link, { type LinkProps } from 'next/link'
 
-import portraitImage from '~/assets/Portrait.jpeg'
+import portraitImage from '~/assets/Portrait.png'
 
 function AvatarContainer({ className, ...props }: ComponentProps) {
   return (
@@ -19,17 +19,18 @@ function AvatarContainer({ className, ...props }: ComponentProps) {
 
 type AvatarImageProps = ComponentProps &
   Omit<LinkProps, 'href'> & {
-  large?: boolean
-  href?: string
-  alt?: boolean
-}
+    large?: boolean
+    href?: string
+    alt?: boolean
+  }
+
 function AvatarImage({
-                       large = false,
-                       className,
-                       href,
-                       alt,
-                       ...props
-                     }: AvatarImageProps) {
+  large = false,
+  className,
+  href,
+  alt,
+  ...props
+}: AvatarImageProps) {
   return (
     <Link
       aria-label="主页"
