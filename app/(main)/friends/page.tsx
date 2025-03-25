@@ -1,8 +1,7 @@
 import { type Metadata } from 'next'
 
-import { Projects } from '~/app/(main)/projects/Projects'
+import { Friends } from "~/app/(main)/friends/Friends";
 import { Container } from '~/components/ui/Container'
-import {Friends} from "~/app/(main)/friends/Friends";
 
 const title = '友链'
 const description =

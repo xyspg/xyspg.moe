@@ -11,7 +11,6 @@ import React from 'react'
 
 import { ExternalLinkIcon } from '~/assets'
 import { Card } from '~/components/ui/Card'
-import { urlForImage } from '~/sanity/lib/image'
 import { type Project } from '~/sanity/schemas/project'
 
 export function FriendCard({ project }: { project: Project }) {
