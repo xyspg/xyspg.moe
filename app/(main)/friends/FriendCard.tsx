@@ -12,6 +12,7 @@ import React from 'react'
 import { ExternalLinkIcon } from '~/assets'
 import { Card } from '~/components/ui/Card'
 import { type Project } from '~/sanity/schemas/project'
+import {urlForImage} from "~/sanity/lib/image";
 
 export function FriendCard({ project }: { project: Project }) {
   const { _id, url, icon, name, description } = project
@@ -41,8 +42,8 @@ export function FriendCard({ project }: { project: Project }) {
     >
       <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
         <Image
-          src='https://www.clorami.cc/images/avatar.jpg'
-          // src={urlForImage(icon)?.size(100, 100).auto('format').url()}
+          // src='https://www.clorami.cc/images/avatar.jpg'
+          src={urlForImage(icon)?.size(100, 100).auto('format').url()}
           alt=""
           width={36}
           height={36}
