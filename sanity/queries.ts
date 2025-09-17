@@ -26,10 +26,11 @@ export const getLatestBlogPostsQuery = ({
   forDisplay = true,
 }: GetBlogPostsOptions) =>
   groq`
-  *[_type == "post" && !(_id in path("drafts.**")) && publishedAt <= "${getDate().toISOString()}"
+  *[_type == "post" && language == "zh-CN"&& !(_id in path("drafts.**")) && publishedAt <= "${getDate().toISOString()}"
   && defined(slug.current)] | order(publishedAt desc)[0...${limit}] {
     _id,
     title,
+    language,
     "slug": slug.current,
     "categories": categories[]->title,
     description,
@@ -52,9 +53,10 @@ export const getLatestBlogPosts = (
 ): Promise<Post[] | null> => clientFetch(getLatestBlogPostsQuery(options))
 
 export const getBlogPostQuery = groq`
-  *[_type == "post" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
+  *[_type == "post" && language == "zh-CN" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
     _id,
     title,
+    language,
     "slug": slug.current,
     "categories": categories[]->title,
     description,

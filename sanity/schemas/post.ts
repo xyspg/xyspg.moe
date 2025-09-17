@@ -42,6 +42,16 @@ export default defineType({
   icon: PencilSwooshIcon,
   fields: [
     defineField({
+      name: "language",
+      type: "string",
+      options: {
+        list: [
+          {title: 'English', value: 'en'},
+          {title: 'Chinese', value: 'zh-CN'}
+        ]
+      }
+    }),
+    defineField({
       name: 'title',
       title: '标题',
       type: 'string',

@@ -7,6 +7,8 @@ import { visionTool } from '@sanity/vision'
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { media } from 'sanity-plugin-media'
+import {documentInternationalization} from '@sanity/document-internationalization'
+
 
 import { settingsPlugin, settingsStructure } from '~/sanity/plugins/settings'
 
@@ -33,5 +35,12 @@ export default defineConfig({
     }),
     media(),
     codeInput(),
+    documentInternationalization({
+      supportedLanguages: [
+        {id: 'zh-CN', title: 'Chinese'},
+        {id: 'en', title: 'English'}
+      ],
+      schemaTypes: ['post'],
+    })
   ],
 })
